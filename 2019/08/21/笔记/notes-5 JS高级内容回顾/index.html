@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 教程 | haoxinchen.club</title>
+  <title>notes-5（JS高级） | haoxinchen.club</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="haoxinchen.club">
-<meta property="og:url" content="http://yoursite.com/tags/教程/index.html">
+  <meta name="description" content="刚刚将前几天看完的JS教程进行系统性的回顾和整理；也亲自将教程里面的内容和代码进行亲自的实现和编写，并在其中不断地思考和理解。现在下列就是我对自己觉得比较重要的东西进行笔记。">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="notes-5（JS高级）">
+<meta property="og:url" content="http://yoursite.com/2019/08/21/笔记/notes-5 JS高级内容回顾/index.html">
 <meta property="og:site_name" content="haoxinchen.club">
+<meta property="og:description" content="刚刚将前几天看完的JS教程进行系统性的回顾和整理；也亲自将教程里面的内容和代码进行亲自的实现和编写，并在其中不断地思考和理解。现在下列就是我对自己觉得比较重要的东西进行笔记。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-21T17:06:37.387Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="haoxinchen.club">
+<meta name="twitter:title" content="notes-5（JS高级）">
+<meta name="twitter:description" content="刚刚将前几天看完的JS教程进行系统性的回顾和整理；也亲自将教程里面的内容和代码进行亲自的实现和编写，并在其中不断地思考和理解。现在下列就是我对自己觉得比较重要的东西进行笔记。">
   
     <link rel="alternative" href="/atom.xml" title="haoxinchen.club" type="application/atom+xml">
   
@@ -150,60 +155,242 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-笔记/notes-5 JS高级内容回顾" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/10/教程/course-1/" class="archive-article-date">
-  	<time datetime="2019-07-10T07:54:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/10/教程/course-1/">course-1</a>
+    <h1 class="article-title" itemprop="name">
+      notes-5（JS高级）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/21/笔记/notes-5 JS高级内容回顾/" class="archive-article-date">
+  	<time datetime="2019-08-21T15:32:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
+</a>
+        
+      </header>
+    
+     
+  <!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#实例：贪吃蛇"><span class="toc-number">1.</span> <span class="toc-text">实例：贪吃蛇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#food"><span class="toc-number">1.1.</span> <span class="toc-text">food</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#snake"><span class="toc-number">1.2.</span> <span class="toc-text">snake</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#game"><span class="toc-number">1.3.</span> <span class="toc-text">game</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#贪吃蛇知识点"><span class="toc-number">2.</span> <span class="toc-text">贪吃蛇知识点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用实例"><span class="toc-number">3.</span> <span class="toc-text">常用实例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#key拷贝继承"><span class="toc-number">3.1.</span> <span class="toc-text">key拷贝继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#call-和-apply"><span class="toc-number">3.2.</span> <span class="toc-text">call 和 apply</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bind-复制并改变this的指向"><span class="toc-number">3.3.</span> <span class="toc-text">bind 复制并改变this的指向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数返回值为函数"><span class="toc-number">3.4.</span> <span class="toc-text">函数返回值为函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#闭包"><span class="toc-number">3.5.</span> <span class="toc-text">闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#递归的使用"><span class="toc-number">3.6.</span> <span class="toc-text">递归的使用</span></a></li></ol></li></ol>
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+           </script>
+              
+ <!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>刚刚将前几天看完的JS教程进行系统性的回顾和整理；也亲自将教程里面的内容和代码进行亲自的实现和编写，并在其中不断地思考和理解。现在下列就是我对自己觉得比较重要的东西进行笔记。</p>
+<a id="more"></a>
+<h1 id="实例：贪吃蛇"><a href="#实例：贪吃蛇" class="headerlink" title="实例：贪吃蛇"></a>实例：贪吃蛇</h1><h2 id="food"><a href="#food" class="headerlink" title="food"></a>food</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">//食物的自调用函数</span><br><span class="line">(function () &#123;</span><br><span class="line">    var elements=[];</span><br><span class="line">    function Food(x,y,width,height,color) &#123;</span><br><span class="line">        this.width = width||20;</span><br><span class="line">        this.height = height||20;</span><br><span class="line">        //此时需要横坐标和纵坐标</span><br><span class="line">        this.x=x||20;</span><br><span class="line">        this.y=y||20;</span><br><span class="line">        this.color = color||&quot;green&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    Food.prototype.init=function (map) &#123;</span><br><span class="line">        remove();</span><br><span class="line">        var div = document.createElement(&quot;div&quot;);</span><br><span class="line">        div.style.position = &quot;absolute&quot;;</span><br><span class="line">        div.style.width = this.width+&quot;px&quot;;</span><br><span class="line">        div.style.height= this.height+&quot;px&quot;;</span><br><span class="line">        div.style.backgroundColor = this.color;</span><br><span class="line">        //横纵坐标</span><br><span class="line">        this.x=parseInt(Math.random()*(map.offsetWidth/this.width))*this.width;</span><br><span class="line">        this.y=parseInt(Math.random()*(map.offsetHeight/this.height))*this.height;</span><br><span class="line">        div.style.left = this.x+&quot;px&quot;;</span><br><span class="line">        div.style.top = this.y+&quot;px&quot;;</span><br><span class="line">        //此时小方块还未加入到div中</span><br><span class="line">        map.appendChild(div);</span><br><span class="line">        //   this.render(map);</span><br><span class="line">        elements.push(div);</span><br><span class="line"></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    //私有函数 删除数组的</span><br><span class="line">    function remove()&#123;</span><br><span class="line">        for (i=0;i&lt;elements.length;i++)&#123;</span><br><span class="line">            var ele=elements[i];</span><br><span class="line">            ele.parentNode.removeChild(ele);</span><br><span class="line">            elements.splice(i,1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    window.Food=Food;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+<p>这里我对Food这个部分进行简单的说明：</p>
+<ul>
+<li>食物Food这部分的开始有构造函数开始思考，并以init方法来进行初始化，初始化过程，重点在于食物的随机坐标出现（这里面就涉及到了私有函数—删除数组）。</li>
+<li>私有函数—删除数组：是通过在数组中找到相应的元素，通过元素找到父类（parentNode），然后由父类删除元素；最后再将数组整个删除（ elements.splice(i,1);）。</li>
+</ul>
+<h2 id="snake"><a href="#snake" class="headerlink" title="snake"></a>snake</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">//小蛇的自调用函数</span><br><span class="line">(function () &#123;</span><br><span class="line">    var elements=[];</span><br><span class="line">    //小蛇的构造函数</span><br><span class="line">    function Snake(width,height,direction) &#123;</span><br><span class="line"></span><br><span class="line">        this.width=width||20;</span><br><span class="line">        this.height=height||20;</span><br><span class="line">        this.direction=direction||&quot;right&quot;;</span><br><span class="line">        this.body=[</span><br><span class="line">            &#123;x:3,y:2,color:&quot;red&quot;&#125;,</span><br><span class="line">            &#123;x:2,y:2,color:&quot;green&quot;&#125;,</span><br><span class="line">            &#123;x:1,y:2,color:&quot;green&quot;&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">    //初始化方法</span><br><span class="line">    Snake.prototype.init=function (map) &#123;</span><br><span class="line">        remove();</span><br><span class="line">        for (i=0;i&lt;this.body.length;i++)&#123;</span><br><span class="line">            var obj = this.body[i];</span><br><span class="line">            var div = document.createElement(&quot;div&quot;);</span><br><span class="line">            map.appendChild(div);</span><br><span class="line">            //设置div的样式</span><br><span class="line">            div.style.position=&quot;absolute&quot;;</span><br><span class="line">            div.style.width=this.width+&quot;px&quot;;</span><br><span class="line">            div.style.height=this.height+&quot;px&quot;;</span><br><span class="line">            //横纵坐标</span><br><span class="line">            div.style.left=obj.x*this.width+&quot;px&quot;;</span><br><span class="line">            div.style.top=obj.y*this.height+&quot;px&quot;;</span><br><span class="line">            div.style.backgroundColor=obj.color;</span><br><span class="line"></span><br><span class="line">            elements.push(div);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    //移动方法</span><br><span class="line">    Snake.prototype.moving = function(food,map)&#123;</span><br><span class="line">        var i = this.body.length-1;</span><br><span class="line">        for (;i&gt;0;i--)&#123;</span><br><span class="line">            this.body[i].x=this.body[i-1].x;</span><br><span class="line">            this.body[i].y=this.body[i-1].y;</span><br><span class="line">        &#125;</span><br><span class="line">        //蛇头判断方向</span><br><span class="line">        switch (this.direction) &#123;</span><br><span class="line">            case &quot;right&quot;: this.body[0].x+=1;break;</span><br><span class="line">            case &quot;left&quot;: this.body[0].x-=1;break;</span><br><span class="line">            case &quot;top&quot;: this.body[0].y-=1;break;</span><br><span class="line">            case &quot;bottom&quot;: this.body[0].y+=1;break;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //判断食物是否被小蛇吃到了</span><br><span class="line">        //小蛇头部坐标与食物的坐标一致</span><br><span class="line">        var hX=this.body[0].x*this.width;</span><br><span class="line">        var hY=this.body[0].y*this.height;</span><br><span class="line"></span><br><span class="line">        if (hX==food.x &amp;&amp; hY==food.y)&#123;</span><br><span class="line">            // alert(&quot;chile&quot;);</span><br><span class="line">            var last=this.body[this.body.length-1];</span><br><span class="line">            this.body.push(&#123;</span><br><span class="line">                x:last.x,</span><br><span class="line">                y:last.y,</span><br><span class="line">                color:last.color,</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            food.init(map);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    //私有的删除函数</span><br><span class="line">    function remove ()&#123;</span><br><span class="line">        var i = elements.length-1;</span><br><span class="line">        for (;i&gt;=0;i--)&#123;</span><br><span class="line">            var ele = elements[i];</span><br><span class="line">            ele.parentNode.removeChild(ele);</span><br><span class="line">            elements.splice(i,1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    window.Snake=Snake;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+<p>snake的自调用函数会比food的复杂得多，这里面含有初始化方法，小蛇的移动方法，自调用函数自身私有的删除函数。</p>
+<ul>
+<li>构造函数：先设定小蛇应该具备的基本属性，比如说小蛇的宽、高、方向、身体部位等。</li>
+<li>移动方法：首先要确定小蛇的横纵坐标，然后根据方向direction来判断蛇头的方向。接下来则是判断小蛇是否吞食到食物这个小方块，如果吞食到了，那么小蛇头部和食物的坐标应该是一致的，这个时候一旦发现食物一致了，就调用 food.init(map)来进行初始化食物。</li>
+<li>初始化方法：通过遍历的方法逐个将小蛇的身体push到地图中，通过构造函数中的属性来设定div的样式（其中有小蛇身体的样式和其身体所处的指标）。</li>
+<li>私有函数—删除数组：是通过在数组中找到相应的元素，通过元素找到父类（parentNode），然后由父类删除元素；最后再将数组整个删除（ elements.splice(i,1);）。</li>
+</ul>
+<h2 id="game"><a href="#game" class="headerlink" title="game"></a>game</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">//游戏自调用函数</span><br><span class="line">(function () &#123;</span><br><span class="line">    var that = null;</span><br><span class="line">    function Game(map) &#123;</span><br><span class="line">        this.food=new Food();</span><br><span class="line">        this.snake=new Snake();</span><br><span class="line">        this.map=map;</span><br><span class="line">        that=this;</span><br><span class="line">    &#125;</span><br><span class="line">    //游戏初始化方法</span><br><span class="line">    Game.prototype.init=function () &#123;</span><br><span class="line">        this.food.init(this.map);</span><br><span class="line">        this.snake.init(this.map);</span><br><span class="line"></span><br><span class="line">        this.moveSnake(this.food,this.map);</span><br><span class="line">        this.bindKey();</span><br><span class="line">        // setInterval(function () &#123;</span><br><span class="line">        //     that.snake.moving(that.food,that.map);</span><br><span class="line">        //     that.snake.init(that.map);</span><br><span class="line">        // &#125;,150);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    //小蛇移动的方法</span><br><span class="line">    Game.prototype.moveSnake=function(food,map)&#123;</span><br><span class="line">        var timeID=setInterval(function () &#123;</span><br><span class="line">            this.snake.moving(food,map);</span><br><span class="line">            this.snake.init(map);</span><br><span class="line"></span><br><span class="line">            //判断撞墙</span><br><span class="line">            var maxX=map.offsetWidth/this.snake.width;</span><br><span class="line">            var maxY=map.offsetHeight/this.snake.height;</span><br><span class="line"></span><br><span class="line">            var headX=this.snake.body[0].x;</span><br><span class="line">            var headY=this.snake.body[0].y;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            if (headX&lt;0||headX&gt;=maxX)&#123;</span><br><span class="line">                clearInterval(timeID);</span><br><span class="line">                alert(&quot;game over ！！&quot;);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            if (headY&lt;0||headY&gt;=maxY)&#123;</span><br><span class="line">                clearInterval(timeID);</span><br><span class="line">                alert(&quot;game over ！！&quot;);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;.bind(that),150);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    //按键改变小蛇移动方向的方法</span><br><span class="line">    Game.prototype.bindKey=function()&#123;</span><br><span class="line">        document.addEventListener(&quot;keydown&quot;,function (e) &#123;</span><br><span class="line">            switch (e.keyCode) &#123;</span><br><span class="line">                case 37:this.snake.direction=&quot;left&quot;;break;</span><br><span class="line">                case 38:this.snake.direction=&quot;top&quot;;break;</span><br><span class="line">                case 39:this.snake.direction=&quot;right&quot;;break;</span><br><span class="line">                case 40:this.snake.direction=&quot;bottom&quot;;break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.bind(that),false);</span><br><span class="line">        //console.log(e.keyCode);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    window.Game = Game;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+<p>游戏的自调用函数是将food和snake组合起来，通过方法来联系两个函数之间的关系，从而达到贪吃蛇游戏的效果。</p>
+<ul>
+<li>小蛇移动移动方法：setInterval设置定时器来使得moving和init两个方法重复进行，从而达到移动的效果，并且通过坐标来判定是否越过地图的范围，从而以此来判断小蛇撞墙结束游戏。</li>
+<li>按键控制小蛇方法：通过addEventListener添加点击事件来获取事件对象参数，并以判断值来改变direction的值，以达到小蛇方向的控制。</li>
+<li>游戏初始化方法：调用小蛇，食物，小蛇的移动和按键方法来到开启游戏。</li>
+</ul>
+<h1 id="贪吃蛇知识点"><a href="#贪吃蛇知识点" class="headerlink" title="贪吃蛇知识点"></a>贪吃蛇知识点</h1><ul>
+<li><p>因为是自调用函数，所以函数内的方法是无法被外界使用的，这是可以通过使用下列代码起到为window属性赋值效果，然后在外界实例对象即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.Food=Food;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>私有删除函数中是通过数组元素找寻其父类，并通过父类删除子类，最后在删除整个数组，已到达更新的效果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//私有的删除函数</span><br><span class="line">    function remove ()&#123;</span><br><span class="line">        var i = elements.length-1;</span><br><span class="line">        for (;i&gt;=0;i--)&#123;</span><br><span class="line">            var ele = elements[i];</span><br><span class="line">            ele.parentNode.removeChild(ele);</span><br><span class="line">            elements.splice(i,1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在添加点击事件时，因为是DOM中的，所以此时方法内的this并不是指实例对象，所以此时需要进行改变this的指向，此时使用的是bind方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//按键改变小蛇移动方向的方法</span><br><span class="line">    Game.prototype.bindKey=function()&#123;</span><br><span class="line">        document.addEventListener(&quot;keydown&quot;,function (e) &#123;</span><br><span class="line">            switch (e.keyCode) &#123;</span><br><span class="line">                case 37:this.snake.direction=&quot;left&quot;;break;</span><br><span class="line">                case 38:this.snake.direction=&quot;top&quot;;break;</span><br><span class="line">                case 39:this.snake.direction=&quot;right&quot;;break;</span><br><span class="line">                case 40:this.snake.direction=&quot;bottom&quot;;break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.bind(that),false);</span><br><span class="line">        //console.log(e.keyCode);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="常用实例"><a href="#常用实例" class="headerlink" title="常用实例"></a>常用实例</h1><h2 id="key拷贝继承"><a href="#key拷贝继承" class="headerlink" title="key拷贝继承"></a>key拷贝继承</h2><p>将一个对象中的属性通过（var key in ？？）的方法来进行复制继承，继承过来的属性完全相同，只是此时有开辟新的空间，所以是不同与之前的属性的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//key 拷贝继承</span><br><span class="line">        function Person() &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        Person.prototype.age=10;</span><br><span class="line">        Person.prototype.name=&quot;mike&quot;;</span><br><span class="line">        Person.prototype.eating=function (food) &#123;</span><br><span class="line">            console.log(&quot;eat&quot;+food);</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        var stu=&#123;&#125;;</span><br><span class="line">        for (var key in Person.prototype)&#123;</span><br><span class="line">            stu[key]=Person.prototype[key];</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(stu.age);</span><br><span class="line">        stu.eating(&quot;null&quot;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="call-和-apply"><a href="#call-和-apply" class="headerlink" title="call 和 apply"></a>call 和 apply</h2><p>call和apply都是改变方法原型的指向，只不过两者之间使用的方法是代码的写法有些不同。<br>将原本属于其他对象的方法指向改变为括号内第一个参数。</p>
+<ul>
+<li>这里特别注意，在贪吃蛇中使用了call方法来共享其他对象的属性，可自行赋值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// call 和 apply</span><br><span class="line">        function Person(age,sex) &#123;</span><br><span class="line">            this.age=age;</span><br><span class="line">            this.sex=sex;</span><br><span class="line">        &#125;</span><br><span class="line">        Person.prototype.sayHi=function (x,y) &#123;</span><br><span class="line">            console.log(&quot;你好&quot;+this.name+(x+y));</span><br><span class="line">        &#125;</span><br><span class="line">        var person=new Person(17,&quot;man&quot;);</span><br><span class="line">        console.log(&quot;=====================&quot;);</span><br><span class="line">        function Student(name) &#123;</span><br><span class="line">            this.name=name;</span><br><span class="line">        &#125;</span><br><span class="line">       var student = new Student(&quot;mike&quot;);</span><br><span class="line"></span><br><span class="line">        person.sayHi.apply(student,[10,20]);</span><br><span class="line">        person.sayHi.call(student,10,20);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="bind-复制并改变this的指向"><a href="#bind-复制并改变this的指向" class="headerlink" title="bind 复制并改变this的指向"></a>bind 复制并改变this的指向</h2><p>bind 是复制并改变this的指向  返回值是复制之后的这个函数或者复制之后的这个方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function GetNumber() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">GetNumber.prototype.getOne=function () &#123;</span><br><span class="line">    var GNumber= parseInt(Math.random()*10+1);</span><br><span class="line">    console.log(GNumber);</span><br><span class="line">&#125;;</span><br><span class="line">GetNumber.prototype.getTwo=function () &#123;</span><br><span class="line"> setInterval(this.getOne.bind(this),1500);</span><br><span class="line">&#125;;</span><br><span class="line">var Gone = new GetNumber();</span><br><span class="line">Gone.getTwo();</span><br><span class="line">//Gone.getOne();</span><br></pre></td></tr></table></figure></p>
+<h2 id="函数返回值为函数"><a href="#函数返回值为函数" class="headerlink" title="函数返回值为函数"></a>函数返回值为函数</h2><p>函数返回值为函数，判断获取某个对象的类型是不是你传入的类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">        function getFunc(type) &#123;</span><br><span class="line">            return function (obj) &#123;</span><br><span class="line">                return Object.prototype.toString.call(obj)===type;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">//type为传入的类型，obj为要获取类型的对象</span><br><span class="line">        var ff = new getFunc(&quot;[object Array]&quot;);</span><br><span class="line">        var result = ff([1,2,3,4]);</span><br><span class="line">        console.log(result);</span><br></pre></td></tr></table></figure></p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>如果想要缓存数据，就要把数据放在外层的函数和里层的函数中间的位置。<br>闭包可以缓存数据，但是缓存的这个作用也是闭包的缺点，不能及时释放对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//这个时候 因为闭包原因  此时返回值的num会保留上一次的值  做到了数据的缓存</span><br><span class="line">        function f() &#123;</span><br><span class="line">            var num=10;</span><br><span class="line">            return function () &#123;</span><br><span class="line">                num++;</span><br><span class="line">                return num;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        var ff=new f();</span><br><span class="line">        console.log(ff());//11</span><br><span class="line">        console.log(ff());//12</span><br><span class="line">        console.log(ff());//13</span><br></pre></td></tr></table></figure></p>
+<h2 id="递归的使用"><a href="#递归的使用" class="headerlink" title="递归的使用"></a>递归的使用</h2><p>例子1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//递归求递加和</span><br><span class="line">function Getsum(num) &#123;</span><br><span class="line">    if (num==1) &#123;</span><br><span class="line">        return 1</span><br><span class="line">    &#125;</span><br><span class="line">    return Getsum(num-1)+num;</span><br><span class="line">&#125;</span><br><span class="line">var ff = Getsum(5);</span><br><span class="line">console.log(ff);</span><br></pre></td></tr></table></figure></p>
+<p>例子2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//递归求每个数位数字的累加</span><br><span class="line">        function GetNumberSum(num) &#123;</span><br><span class="line">            if (num&lt;10)&#123;</span><br><span class="line">                return num;</span><br><span class="line">            &#125;</span><br><span class="line">            return num%10+GetNumberSum(parseInt(num/10));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        console.log(GetNumberSum(5235));//15</span><br></pre></td></tr></table></figure></p>
+<p>、</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/21/笔记/notes-5 JS高级内容回顾/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/07/28/笔记/notes-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">notes-3（html+css）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+
 
 
           </div>
@@ -226,9 +413,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
