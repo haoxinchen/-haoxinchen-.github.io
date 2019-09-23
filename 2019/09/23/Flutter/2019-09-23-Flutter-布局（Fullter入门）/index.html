@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | haoxinchen.club</title>
+  <title>Flutter 布局（Fullter入门） | haoxinchen.club</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="haoxinchen.club">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="Container详解">
+<meta name="keywords" content="Flutter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flutter 布局（Fullter入门）">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/Flutter/2019-09-23-Flutter-布局（Fullter入门）/index.html">
 <meta property="og:site_name" content="haoxinchen.club">
+<meta property="og:description" content="Container详解">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/177500-f3149c961761c104.png?imageMogr2/auto-orient/strip|imageView2/2/w/622/format/webp">
+<meta property="og:updated_time" content="2019-09-23T02:52:03.572Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="haoxinchen.club">
+<meta name="twitter:title" content="Flutter 布局（Fullter入门）">
+<meta name="twitter:description" content="Container详解">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/177500-f3149c961761c104.png?imageMogr2/auto-orient/strip|imageView2/2/w/622/format/webp">
   
     <link rel="alternative" href="/atom.xml" title="haoxinchen.club" type="application/atom+xml">
   
@@ -150,36 +157,173 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Flutter/2019-09-23-Flutter-布局（Fullter入门）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Flutter 布局（Fullter入门）
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/23/Flutter/2019-09-23-Flutter-布局（Fullter入门）/" class="archive-article-date">
+
+        
+        <a href="/2019/09/23/Flutter/2019-09-23-Flutter-布局（Fullter入门）/" class="archive-article-date">
   	<time datetime="2019-09-23T01:23:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/23/Flutter/2019-09-23-Flutter-布局（Fullter入门）/">Flutter 布局（Fullter入门）</a>
-    </h1>
-  
+        
+      </header>
+    
+     
+  <!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1、简介"><span class="toc-number">1.</span> <span class="toc-text">1.1、简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2、组成"><span class="toc-number">2.</span> <span class="toc-text">1.2、组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3、布局"><span class="toc-number">3.</span> <span class="toc-text">1.3、布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4、继承关系"><span class="toc-number">4.</span> <span class="toc-text">1.4、继承关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1、解析"><span class="toc-number">5.</span> <span class="toc-text">2.1、解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码解析"><span class="toc-number">5.1.</span> <span class="toc-text">代码解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性解析"><span class="toc-number">5.2.</span> <span class="toc-text">属性解析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2、例子"><span class="toc-number">6.</span> <span class="toc-text">2.2、例子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#源码"><span class="toc-number">6.1.</span> <span class="toc-text">源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用场景"><span class="toc-number">6.2.</span> <span class="toc-text">常用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、注意事项"><span class="toc-number">7.</span> <span class="toc-text">3、注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、参考"><span class="toc-number">8.</span> <span class="toc-text">4、参考</span></a></li></ol>
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+           </script>
+              
+ <!-- 目录内容结束 -->
 
-        <div class="article-info info-on-right">
-          
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Container详解<br><a id="more"></a></p>
+<h2 id="1-1、简介"><a href="#1-1、简介" class="headerlink" title="1.1、简介"></a>1.1、简介</h2><blockquote>
+<p>A convenience widget that combines common painting, positioning, and sizing widgets.</p>
+</blockquote>
+<p>Container在Flutter中太常见了。官方给出的简介，是一个结合了绘制（painting）、定位（positioning）以及尺寸（sizing）widget的widget。</p>
+<p>总结：Container是一个组合的widget，内部有绘制widget、定位widget、尺寸widget。</p>
+<h2 id="1-2、组成"><a href="#1-2、组成" class="headerlink" title="1.2、组成"></a>1.2、组成</h2><p>Container的组成如下：</p>
+<ul>
+<li>最里层的是child元素；</li>
+<li>child元素首先会被padding包着；</li>
+<li>然后添加额外的constraints限制；</li>
+<li>最后添加margin。</li>
+</ul>
+<p>Container的绘制的过程如下：</p>
+<ul>
+<li>首先会绘制transform效果；</li>
+<li>接着绘制decoration；</li>
+<li>然后绘制child；</li>
+<li>最后绘制foregroundDecoration。</li>
+</ul>
+<p>Container自身尺寸的调节分两种情况：</p>
+<ul>
+<li>Container在没有子节点（children）的时候，会试图去变得足够大。除非constraints是unbounded限制，在这种情况下，Container会试图去变得足够小。</li>
+<li>带子节点的Container，会根据子节点尺寸调节自身尺寸，但是Container构造器中如果包含了width、height以及constraints，则会按照构造器中的参数来进行尺寸的调节。</li>
+</ul>
+<h2 id="1-3、布局"><a href="#1-3、布局" class="headerlink" title="1.3、布局"></a>1.3、布局</h2><p>由于Container组合了一系列的widget，这些widget都有自己的布局行为，因此Container的布局行为有时候是比较复杂的。</p>
+<p>一般情况下，Container会遵循如下顺序去尝试布局：</p>
+<ul>
+<li>对齐（alignment）；</li>
+<li>调节自身尺寸适合子节点；</li>
+<li>采用width、height以及constraints布局；</li>
+<li>扩展自身去适应父节点；</li>
+<li>调节自身到足够小。</li>
+</ul>
+<p>进一步说：</p>
+<ul>
+<li>如果没有子节点、没有设置width、height以及constraints，并且父节点没有设置unbounded的限制，Container会将自身调整到足够小。</li>
+<li>如果没有子节点、对齐方式（alignment），但是提供了width、height或者constraints，那么Container会根据自身以及父节点的限制，将自身调节到足够小。</li>
+<li>如果没有子节点、width、height、constraints以及alignment，但是父节点提供了bounded限制，那么Container会按照父节点的限制，将自身调整到足够大。</li>
+<li>如果有alignment，父节点提供了unbounded限制，那么Container将会调节自身尺寸来包住child；</li>
+<li>如果有alignment，并且父节点提供了bounded限制，那么Container会将自身调整的足够大（在父节点的范围内），然后将child根据alignment调整位置；</li>
+<li>含有child，但是没有width、height、constraints以及alignment，Container会将父节点的constraints传递给child，并且根据child调整自身。</li>
+</ul>
+<p>另外，margin以及padding属性也会影响到布局。</p>
+<h2 id="1-4、继承关系"><a href="#1-4、继承关系" class="headerlink" title="1.4、继承关系"></a>1.4、继承关系</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object &gt; Diagnosticable &gt; DiagnosticableTree &gt; Widget &gt; StatelessWidget &gt; Container</span><br></pre></td></tr></table></figure>
+<p>从继承关系可以看出，Container是一个StatelessWidget。Container并不是一个最基础的widget，它是由一系列的基础widget组合而成。</p>
+<h2 id="2-1、解析"><a href="#2-1、解析" class="headerlink" title="2.1、解析"></a>2.1、解析</h2><h3 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h3><p>构造函数如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Container(&#123;</span><br><span class="line">    Key key,</span><br><span class="line">    <span class="keyword">this</span>.alignment,</span><br><span class="line">    <span class="keyword">this</span>.padding,</span><br><span class="line">    Color color,</span><br><span class="line">    Decoration decoration,</span><br><span class="line">    <span class="keyword">this</span>.foregroundDecoration,</span><br><span class="line">    <span class="keyword">double</span> width,</span><br><span class="line">    <span class="keyword">double</span> height,</span><br><span class="line">    BoxConstraints constraints,</span><br><span class="line">    <span class="keyword">this</span>.margin,</span><br><span class="line">    <span class="keyword">this</span>.transform,</span><br><span class="line">    <span class="keyword">this</span>.child,</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>平时使用最多的，也就是padding、color、width、height、margin属性。</p>
+<h3 id="属性解析"><a href="#属性解析" class="headerlink" title="属性解析"></a>属性解析</h3><p><strong>key</strong>：Container唯一标识符，用于查找更新。</p>
+<p><strong>alignment</strong>：控制child的对齐方式，如果container或者container父节点尺寸大于child的尺寸，这个属性设置会起作用，有很多种对齐方式。</p>
+<p><strong>padding</strong>：decoration内部的空白区域，如果有child的话，child位于padding内部。padding与margin的不同之处在于，padding是包含在content内，而margin则是外部边界，设置点击事件的话，padding区域会响应，而margin区域不会响应。</p>
+<p><strong>color</strong>：用来设置container背景色，如果foregroundDecoration设置的话，可能会遮盖color效果。</p>
+<p><strong>decoration</strong>：绘制在child后面的装饰，设置了decoration的话，就不能设置color属性，否则会报错，此时应该在decoration中进行颜色的设置。</p>
+<p><strong>foregroundDecoration</strong>：绘制在child前面的装饰。</p>
+<p><strong>width</strong>：container的宽度，设置为double.infinity可以强制在宽度上撑满，不设置，则根据child和父节点两者一起布局。</p>
+<p><strong>height</strong>：container的高度，设置为double.infinity可以强制在高度上撑满。</p>
+<p><strong>constraints</strong>：添加到child上额外的约束条件。</p>
+<p><strong>margin</strong>：围绕在decoration和child之外的空白区域，不属于内容区域。</p>
+<p><strong>transform</strong>：设置container的变换矩阵，类型为Matrix4。</p>
+<p><strong>child</strong>：container中的内容widget。</p>
+<blockquote>
+<p>（double.infinity、double.infinity、foregroundDecoration）</p>
+</blockquote>
+<h2 id="2-2、例子"><a href="#2-2、例子" class="headerlink" title="2.2、例子"></a>2.2、例子</h2><p>官方文档给出例子的一个变种，包含属性比较全，可以看下其用法。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Container(</span><br><span class="line">  constraints: <span class="keyword">new</span> BoxConstraints.expand(</span><br><span class="line">    height:Theme.of(context).textTheme.display1.fontSize * <span class="number">1.1</span> + <span class="number">200.0</span>,</span><br><span class="line">  ),</span><br><span class="line">  decoration: <span class="keyword">new</span> BoxDecoration(</span><br><span class="line">    border: <span class="keyword">new</span> Border.all(width: <span class="number">2.0</span>, color: Colors.red),</span><br><span class="line">    color: Colors.grey,</span><br><span class="line">    borderRadius: <span class="keyword">new</span> BorderRadius.all(<span class="keyword">new</span> Radius.circular(<span class="number">20.0</span>)),</span><br><span class="line">    image: <span class="keyword">new</span> DecorationImage(</span><br><span class="line">      image: <span class="keyword">new</span> NetworkImage(<span class="string">'http://h.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=0d023672312ac65c67506e77cec29e27/9f2f070828381f30dea167bbad014c086e06f06c.jpg'</span>),</span><br><span class="line">      centerSlice: <span class="keyword">new</span> Rect.fromLTRB(<span class="number">270.0</span>, <span class="number">180.0</span>, <span class="number">1360.0</span>, <span class="number">730.0</span>),</span><br><span class="line">    ),</span><br><span class="line">  ),</span><br><span class="line">  padding: <span class="keyword">const</span> EdgeInsets.all(<span class="number">8.0</span>),</span><br><span class="line">  alignment: Alignment.center,</span><br><span class="line">  child: <span class="keyword">new</span> Text(<span class="string">'Hello World'</span>,</span><br><span class="line">    style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black)),</span><br><span class="line">  transform: <span class="keyword">new</span> Matrix4.rotationZ(<span class="number">0.3</span>),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>实际运行效果如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/177500-f3149c961761c104.png?imageMogr2/auto-orient/strip|imageView2/2/w/622/format/webp" alt="img"></p>
+<p>其中decoration可以设置边框、背景色、背景图片、圆角等属性，非常实用。对于transform这个属性，一般有过其他平台开发经验的，都大致了解，这种变换，一般不是变换的实际位置，而是变换的绘制效果，也就是说它的点击以及尺寸、间距等都是按照未变换前的。</p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">decoration = decoration ?? (color != <span class="literal">null</span> ? <span class="keyword">new</span> BoxDecoration(color: color) : <span class="literal">null</span>),</span><br></pre></td></tr></table></figure>
+<p>可以看出，对于颜色的设置，最后都是转换为decoration来进行绘制的。如果同时包含decoration和color两种属性，则会报错。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@override</span></span><br><span class="line">  <span class="function">Widget <span class="title">build</span><span class="params">(BuildContext context)</span> </span>&#123;</span><br><span class="line">    Widget current = child;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (child == <span class="keyword">null</span> &amp;&amp; (constraints == <span class="keyword">null</span> || !constraints.isTight)) &#123;</span><br><span class="line">      current = <span class="keyword">new</span> LimitedBox(</span><br><span class="line">        maxWidth: <span class="number">0.0</span>,</span><br><span class="line">        maxHeight: <span class="number">0.0</span>,</span><br><span class="line">        child: <span class="keyword">new</span> ConstrainedBox(constraints: <span class="keyword">const</span> BoxConstraints.expand())</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (alignment != <span class="keyword">null</span>)</span><br><span class="line">      current = <span class="keyword">new</span> Align(alignment: alignment, child: current);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">final</span> EdgeInsetsGeometry effectivePadding = _paddingIncludingDecoration;</span><br><span class="line">    <span class="keyword">if</span> (effectivePadding != <span class="keyword">null</span>)</span><br><span class="line">      current = <span class="keyword">new</span> Padding(padding: effectivePadding, child: current);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (decoration != <span class="keyword">null</span>)</span><br><span class="line">      current = <span class="keyword">new</span> DecoratedBox(decoration: decoration, child: current);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (foregroundDecoration != <span class="keyword">null</span>) &#123;</span><br><span class="line">      current = <span class="keyword">new</span> DecoratedBox(</span><br><span class="line">        decoration: foregroundDecoration,</span><br><span class="line">        position: DecorationPosition.foreground,</span><br><span class="line">        child: current</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (constraints != <span class="keyword">null</span>)</span><br><span class="line">      current = <span class="keyword">new</span> ConstrainedBox(constraints: constraints, child: current);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (margin != <span class="keyword">null</span>)</span><br><span class="line">      current = <span class="keyword">new</span> Padding(padding: margin, child: current);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (transform != <span class="keyword">null</span>)</span><br><span class="line">      current = <span class="keyword">new</span> Transform(transform: transform, child: current);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> current;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>Container的build函数不长，绘制也是一个线性的判断的过程，一层一层的包裹着widget，去实现不同的样式。</p>
+<p>最里层的是child，如果为空或者其他约束条件，则最里层包含的为一个LimitedBox，然后依次是Align、Padding、DecoratedBox、前景DecoratedBox、ConstrainedBox、Padding（实现margin效果）、Transform。</p>
+<p>Container的源码本身并不复杂，复杂的是它的各种布局表现。我们谨记住一点，如果内部不设置约束，则按照父节点尽可能的扩大，如果内部有约束，则按照内部来。</p>
+<h3 id="常用场景"><a href="#常用场景" class="headerlink" title="常用场景"></a>常用场景</h3><p>Container算是目前项目中，最经常用到的一个widget。当然并不是绝对的，也可以通过其他widget来实现。</p>
+<ul>
+<li>需要设置间隔（这种情况下，如果只是单纯的间隔，也可以通过Padding来实现）；</li>
+<li>需要设置背景色；</li>
+<li>需要设置圆角或者边框的时候（ClipRRect也可以实现圆角效果）；</li>
+<li>需要对齐（Align也可以实现）；</li>
+<li>需要设置背景图片的时候（也可以使用Stack实现）。</li>
+</ul>
+<h2 id="3、注意事项"><a href="#3、注意事项" class="headerlink" title="3、注意事项"></a>3、注意事项</h2><p>这个小控件，写起来很简单，本身没有什么难度，只是纯粹的介绍了Container的使用方法，但是有一个地方需要注意的。在控件的deactivate状态，我们需要将控件的属性初始到最开始的状态，例如在本例中，有如下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@override</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deactivate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">super</span>.deactivate();</span><br><span class="line">  currentColor = widget.backgroundColor;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这么做是为什么了？是因为在点击按钮进行页面跳转的时候，按钮处在点击态，当我们返回的时候，页面还是处在点击态，这显然就不正确了，因此需要我们手动的在deactivate状态下，将控件恢复到初始状态。但是呢，这个设置颜色，并不是说在deactivate的时候，就立马去刷新控件，而是在下次再进入这个页面的时候，再次运行build的时候，会按照这个初始值进行绘制，也就是恢复到了最开始的状态。</p>
+<h2 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h2><p><a href="https://github.com/yang7229693/flutter-study" target="_blank" rel="noopener">参考文章</a></p>
+<p><a href="https://github.com/yang7229693/flutter-study" target="_blank" rel="noopener">代码Github地址</a>，这是一个系列的项目，如果不出意外，会将Flutter中常见的二十多种布局widget都介绍一下。</p>
+<p>后面是一个大佬的<a href="https://github.com/yang7229693/flutter-study" target="_blank" rel="noopener">github地址</a>，里面包含了大佬写的关于flutter学习相关的一些文章，会定期更新，也会上传一些学习demo，欢迎大家关注。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,365 +335,107 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/23/Flutter/2019-09-23-Flutter-布局（Fullter入门）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/22/Flutter/2019-09-22-Flutter框架了解（Fullter入门）/" class="archive-article-date">
-  	<time datetime="2019-09-22T12:49:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/22/Flutter/2019-09-22-Flutter框架了解（Fullter入门）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Flutter框架了解（Fullter入门）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/Flutter/2019-09-22-Flutter框架了解（Fullter入门）/">Flutter框架了解（Fullter入门）</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Flutter</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/22/日志/2019-09-22-面试总结-（自书）/" class="archive-article-date">
-  	<time datetime="2019-09-22T01:22:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/日志/2019-09-22-面试总结-（自书）/">面试总结 （自书）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">diary</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/18/vue/day5/" class="archive-article-date">
-  	<time datetime="2019-09-18T15:32:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/18/vue/day5/">vue.js-notes-5 （webpack）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/13/vue/day4/" class="archive-article-date">
-  	<time datetime="2019-09-13T15:32:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/13/vue/day4/">vue.js-notes-4</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vue.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/08/vue/day3/" class="archive-article-date">
-  	<time datetime="2019-09-08T15:32:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/08/vue/day3/">vue.js-notes-3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vue.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/06/vue/day2/" class="archive-article-date">
-  	<time datetime="2019-09-06T15:32:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/06/vue/day2/">vue.js-notes-2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vue.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/vue/day1/" class="archive-article-date">
-  	<time datetime="2019-08-25T15:32:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/vue/day1/">vue.js-notes-1（vue入门）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vue.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/21/笔记/notes-5 JS高级内容回顾/" class="archive-article-date">
-  	<time datetime="2019-08-21T15:32:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/21/笔记/notes-5 JS高级内容回顾/">notes-5（JS高级）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/20/随堂小记/1/随堂小记-1/" class="archive-article-date">
-  	<time datetime="2019-08-20T12:22:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/20/随堂小记/1/随堂小记-1/">随堂记-1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -572,8 +458,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
